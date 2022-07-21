@@ -5,7 +5,11 @@ import { Button } from "../../components/Button";
 
 import * as S from "./styles";
 
-export function Welcome() {
+export function Welcome({ navigation }) {
+  function handleNavigation() {
+    navigation.navigate("Home");
+  }
+
   return (
     <S.Container>
       <S.Content>
@@ -23,7 +27,7 @@ export function Welcome() {
         <S.SubTitle>Encontre todos os pokémons em um só lugar</S.SubTitle>
       </S.Content>
       <S.Footer>
-        <Button title="Iniciar" />
+        <Button title="Iniciar" onPress={handleNavigation} />
       </S.Footer>
     </S.Container>
   );
