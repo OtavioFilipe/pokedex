@@ -7,6 +7,7 @@ export const Container = styled.View`
     ${({ theme }) => css`
         flex: 1;
         background-color: ${theme.colors.background};
+        padding-bottom: 20px;
     `}
 `;
 
@@ -16,6 +17,7 @@ export const Header = styled.ImageBackground`
         height: 220px;
         background-color: ${theme.colors.background};
         margin-left: -20px;
+        
     `};
 `;
 
