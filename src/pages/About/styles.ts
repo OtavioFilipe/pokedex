@@ -1,6 +1,9 @@
 import styled, { css } from 'styled-components/native';
 import { TypeName } from './index';
 
+import * as Progress from 'react-native-progress';
+
+
 type TypeProps = {
     type: TypeName
 }
@@ -135,6 +138,7 @@ export const Attributes = styled.Text`
         font-weight: 500;
         font-size: 12px;
         line-height: 14px;
+        width: 110px;
         text-transform: capitalize;
         color: ${theme.colors.light_text};
     `}
@@ -149,5 +153,23 @@ export const AttributeValue = styled.Text`
         text-align: right;
         color: ${theme.colors.detail};
         margin-left: 20px;
+    `}
+`;
+
+export const ContentBar = styled.View`
+    margin-left: 20px;
+`;
+
+export const ProgressBar = styled(Progress.Bar)<TypeProps>``;
+
+export const Ability = styled.Text`
+    ${({ theme }) => css`
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 20px;
+        color: ${theme.colors.detail};
+        text-transform: capitalize;
     `}
 `;
